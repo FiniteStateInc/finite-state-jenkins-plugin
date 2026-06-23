@@ -23,6 +23,17 @@ This plugin gives you the ability to add Post Build actions and Pipeline steps f
 - Optionally waits for the scan to complete and sets the build result accordingly
 - Logs the resolved project/version/scan IDs and a direct link to the results in the Finite State UI
 
+## Version compatibility (Alloy vs Helix)
+
+This plugin calls the Finite State **public v0 API** directly. Choose the plugin version that matches your Finite State platform:
+
+| Platform | Plugin version |
+|----------|----------------|
+| **Helix** (public v0 API) | this version and later (no CLT, no Java required on the agent) |
+| **Alloy** (legacy, CLT-based) | [`1.092.v793c6eb_13c01`](https://github.com/jenkinsci/finite-state-analysis-plugin/releases/tag/1.092.v793c6eb_13c01) — the **last release that supports Alloy** |
+
+If you are still on Alloy, pin `1.092.v793c6eb_13c01`; this v0/Helix release is **not** backward-compatible with Alloy.
+
 ## Getting started
 
 To use this plugin, follow the following steps:
